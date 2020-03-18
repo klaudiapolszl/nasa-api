@@ -9,6 +9,6 @@ npm install node-sass
 
 ## Usage
 ```
-$ npm start
+npm start
 Open http://localhost:3000
 ```
