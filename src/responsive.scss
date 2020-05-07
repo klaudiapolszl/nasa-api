@@ -1,21 +1,21 @@
 @media (max-width: 1200px) {
-  .polaroid {
+  .main-container .polaroid {
     width: 80%;
   }
 }
 @media (max-width: 700px) {
-  .polaroid {
+  .main-container .polaroid {
     width: 100%;
   }
-  iframe{
+  .main-container .polaroid__media {
     min-height: 400px;
   }
 }
 @media (max-width: 400px) {
-  .polaroid {
+  .main-container .polaroid {
     width: 100%;
   }
-  iframe{
+  .main-container .polaroid__media {
     min-height: 300px;
   }
 }
