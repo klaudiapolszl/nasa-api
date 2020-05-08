@@ -13,7 +13,7 @@ export const PagePolaroid = styled.div`
   }
 `;
 
-export const PolaroidVideo = styled.video`
+const styles = `
   width: 100%;
   min-height: 500px;
   border: none;
@@ -25,16 +25,12 @@ export const PolaroidVideo = styled.video`
   }
 `;
 
+export const PolaroidVideo = styled.video`
+  ${styles}
+`;
+
 export const PolaroidImg = styled.img`
-  width: 100%;
-  min-height: 500px;
-  border: none;
-  @media (max-width: 700px) {
-    min-height: 400px;
-  }
-  @media (max-width: 400px) {
-    min-height: 300px;
-  }
+  ${styles}
 `;
 
 export const PolaroidTextContainer = styled.div`
