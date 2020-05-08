@@ -9,5 +9,6 @@ export const theme = {
     fontFamily: 'Anton, sans-serif',
   }
 };
-export const getColor = color => props => props.theme.color[color];
-export const getFont = font => props => props.theme.font[font];
+
+export const getColor = colorType => props => props.theme.color[colorType];
+export const getFont = fontType => props => props.theme.font[fontType];
