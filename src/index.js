@@ -47,7 +47,13 @@ class PicOfTheDay extends React.Component {
 
   componentDidMount() {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=NMnY548zyrPfYSxvM1mATNzhwYbOqgEkFiwV422Z`)
-      .then(r => r.json())
+      .then(r => {
+        if (r.ok) {
+            return r.json()
+        } else {
+            throw new Error("A connection error has occurred!")
+        }
+      })
       .then(ans => {
         this.setState({
           title: ans.title,
@@ -59,7 +65,8 @@ class PicOfTheDay extends React.Component {
           mediaType: ans.media_type,
           video: ans.url
         })
-    });
+      })
+      .catch(error => console.dir("Error: ", error));
   }
 
   render() {
